@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Elías 🌻</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+#inicio,
+#carta{
+text-align:center;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:12px;
+cursor: puntero;
+background:#ffcc00;
+font-weight:bold;
+}
+
+video{
+Anchura: 100VW;
+height:100vh;
+object-fit:cover;
+}
+
+#contenedor de vídeo,
+#carta{
+display:none;
+}
+
+.carta{
+Anchura:min (90VW,500PX);
+min-height:300px;
+Antecedentes:Blanco;
+color:black;
+border-radius:20px;
+padding:25px;
+cursor:pointer;
+box-shadow:0 0 25px gold;
+Display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+font-weight:bold;
+margin:auto;
+}
+
+.mensaje{
+Fuente-tamaño:18px;
+line-height:1.6;
+text-align:left;
+}
+</estilo>
+</cabeza>
+<cuerpo>
+
+<div id="inicio">
+<h1>⭐ Elías, toca la Starr Drop ⭐</h1>
+<br>
+text-align:izquierda;
+</div>
+
+<div id="videoContainer">
+<video id="video" reproducción automática playinline>
+<source src="video.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="carta">
+<div class="carta" onclick="abrirCarta () " id="sobre">
+🌻
+</div>
+</div>
+
+<script>
+
+función iniciar () {
+document.getElementById ("inicio").style.display="none";
+document.getElementById ("videoContainer").style.display="block";
+
+const video = document.getElementById ("video");
+
+video.ondosado = () => {
+document.getElementById ("videoContainer").style.display="none";
+document.getElementById ("carta").style.display="block";
+};
+}
+
+función abrirCarta () {
+
+const sobre = document.getElementById ("sobre");
+
+sobre.innerHTML = '
+<Div Clase="Mensaje">
+ESCRIBE AQUÍ TU CARTA
+</div>
+';
+
+sobre.onclick = nulo;
+}
+
+</script>
+
+</cuerpo>
+</html>
